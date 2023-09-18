@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+        <AssemblyName>DDDTemplate.$(MSBuildProjectName)</AssemblyName>
+        <RootNamespace>$(AssemblyName)</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>      
+      <PackageReference Include="AutoMapper" Version="12.0.1" />      
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />                  
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Kernel.Base\Kernel.Base.csproj" />
+      <ProjectReference Include="..\Kernel.Contracts\Kernel.Contracts.csproj" />      
+      <ProjectReference Include="..\Shared\DDDTemplate.Contracts\DDDTemplate.Contracts.csproj" />
+    </ItemGroup>
+    
+</Project>

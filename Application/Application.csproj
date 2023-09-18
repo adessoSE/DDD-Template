@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>        
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>DDDTemplate.$(MSBuildProjectName)</AssemblyName>
+        <RootNamespace>$(AssemblyName)</RootNamespace>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>		
+        <PackageReference Include="MassTransit" Version="8.0.16" />		
+        <PackageReference Include="Microsoft.Azure.AppConfiguration.AspNetCore" Version="6.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>        
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />                           
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\Kernel.Contracts\Kernel.Contracts.csproj" />               
+      <ProjectReference Include="..\Shared\UserService.Contracts\UserService.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>
