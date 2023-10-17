@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "adesso SE, LoB Microsoft, CC MUC1, Tatiana Avdeeva",
+  "classifications": ["Web", "Cloud", "iCert"],
+  "identity": "ddd-template",
+  "name": "DDD Template",
+  "shortName": "ddd-template",
+  "tags": {
+    "type": "solution",
+    "language": "C#"
+  },
+  "sourceName": "DDDTemplate",
+  "defaultName": "Unnamed",
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "modifiers": [{ "exclude": "template.nuspec" }]
+    }
+  ],
+  "symbols": {    
+    "InitialDomainEntity": {
+      "type": "parameter",
+      "datatype": "text",
+      "fileRename": "Template",
+      "description": "Enter the name of the first Entity that will be created for you (e.g. Product or Customer)",
+      "replaces": "Template",
+      "defaultValue": "Template"
+    }
+  }
+}
